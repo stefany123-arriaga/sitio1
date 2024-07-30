@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gisselly Cake's</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Blueberry', sans-serif;
+            background-image: url('https://i.pinimg.com/736x/04/ea/dc/04eadc522ee38e200b46eef8be0758e4.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #ffabc6;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffabc6;
+            padding: 15px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+            font-size: 80px; /* Tamaño de la fuente */
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .search {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .search input[type="text"] {
+            width: 200px;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #555;
+            margin-right: 10px;
+        }
+
+        .search button {
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: pink;
+            color: white;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #ffabc6;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .redes-sociales a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .redes-sociales a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-title {
+            font-family: 'ARIAL BLACK', sans-serif;
+            font-size: 40px;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .small-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .classification {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .centered img {
+            width: 300px;
+            height: auto;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #186A3B;
+            color: white;
+            cursor: pointer;
+        }
+
+        .additional-content {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .additional-content p {
+            margin-bottom: 10px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <h1 class="logo-title">Gisselly Cake</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="CONOSE.html">Conoce</a></li>
+                <li><a href="MATE.html">Recetas</a></li>
+                <li><a href="CURSOS.html">Cursos</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Busca una receta...">
+            <button type="submit">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="classification">
+            <center>
+                <h1>Recetas</h1>
+            </center>
+            <h2>Pays</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/c1/e9/5b/c1e95b0c86b51c0b951edd3d683cb995.jpg" alt="Receta 1" onclick="showRecipe('receta1')">
+                    <p>Pay de Manzana</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/34/4a/f8/344af8832ea75f9b270169c2c1208a02.jpg" alt="Receta 2" onclick="showRecipe('receta2')">
+                    <p>Pay de Limón</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/8f/fd/18/8ffd1819fab8222e5d0157a34ebc329d.jpg" alt="Receta 3" onclick="showRecipe('receta3')">
+                    <p>Pay de Queso 3</p>
+                </div>
+            </div>
+        </section>
+        <section class="classification">
+            <h2>Tartas</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/6a/89/3a/6a893a3409735deccbab1a7f4511979d.jpg" alt="Receta 4" onclick="showRecipe('receta4')">
+                    <p>Tarta de Zanahoria</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/2f/9c/83/2f9c83788b557b26ceaf25db48a124b7.jpg" alt="Receta 5" onclick="showRecipe('receta5')">
+                    <p>Tarta de Santiago</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/2f/17/ef/2f17ef9f954eab10b6f7a13517b5202b.jpg" alt="Receta 6" onclick="showRecipe('receta6')">
+                    <p>Tarta de Limon</p>
+                </div>
+            </div>
+        </section>
+        <section class="classification">
+            <h2>Pasteles</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/35/33/f2/3533f2e8bdb3763f75ec652bceb21c6a.jpg" alt="Receta 7" onclick="showRecipe('receta7')">
+                    <p>Pastel de Chocolate</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/04/93/af/0493afa8810dd3a48e9408ced1283037.jpg" alt="Receta 8" onclick="showRecipe('receta8')">
+                    <p>Pastel de coco</p>
+                </div>
+                <div class="gallery-item">
+                    <img class="small-image" src="https://i.pinimg.com/564x/c7/e9/43/c7e943c6b0c3bd66f33ea577a6fd3c52.jpg" alt="Receta 9" onclick="showRecipe('receta9')">
+                    <p>Pastel de tres leches</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipe-details" class="hidden centered">
+            <img id="recipe-image" src="" alt="Imagen de la receta">
+            <h2 id="recipe-title"></h2>
+            <p id="recipe-text"></p>
+            <div class="additional-content">
+                <h3>Ingredientes:</h3>
+                <ul id="recipe-ingredients"></ul>
+                <h3>Instrucciones:</h3>
+                <ul id="recipe-instructions"></ul>
+            </div>
+            <button class="back-button" onclick="goBack()">Volver a las Recetas</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Derechos reservados &copy; Gisselly Cake's 2023</p>
+        <div class="redes-sociales">
+            <a href="https://m.facebook.com/profile.php?mibextid=LQQJ4d" target="_blank"><img src="C:\Users\alexa\Downloads\2023_Facebook_icon.svg"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+    const recipes = {
+        receta1: {
+            title: 'Pay de Manzana',
+            text: 'Esta es una receta de Pay de Manzana. Deliciosa y fácil de hacer.',
+            ingredients: ['Harina', 'Azúcar', 'Manzanas', 'Mantequilla', 'Canela'],
+            image: 'https://i.pinimg.com/564x/c1/e9/5b/c1e95b0c86b51c0b951edd3d683cb995.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir la mantequilla y amasar hasta obtener una mezcla arenosa.',
+                'Incorporar las manzanas picadas y la canela, mezclar bien.',
+                'Extender la masa en un molde para pay y hornear durante 30-35 minutos o hasta que esté dorada.',
+                'Dejar enfriar antes de servir.'
+            ]
+        },
+        receta2: {
+            title: 'Pay de Limón',
+            text: 'Esta es una receta de Pay de Limón. Refrescante y deliciosa.',
+            ingredients: ['Harina', 'Azúcar', 'Limones', 'Mantequilla', 'Huevos'],
+            image: 'https://i.pinimg.com/564x/34/4a/f8/344af8832ea75f9b270169c2c1208a02.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir la mantequilla y amasar hasta obtener una mezcla arenosa.',
+                'Incorporar los huevos y el jugo de limón, mezclar hasta formar una masa homogénea.',
+                'Extender la masa en un molde para pay y hornear durante 20-25 minutos o hasta que esté dorada.',
+                'Dejar enfriar antes de servir.'
+            ]
+        },
+        receta3: {
+            title: 'Pay de Queso',
+            text: 'Esta es una receta de Pay de Queso. Delicioso y cremoso.',
+            ingredients: ['Harina', 'Azúcar', 'Queso crema', 'Huevos', 'Galletas'],
+            image: 'https://i.pinimg.com/564x/8f/fd/18/8ffd1819fab8222e5d0157a34ebc329d.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir el queso crema y los huevos, batir hasta obtener una mezcla homogénea.',
+                'Triturar las galletas y colocarlas en el fondo de un molde para pay.',
+                'Verter la mezcla de queso crema sobre la base de galletas.',
+                'Hornear durante 40-45 minutos o hasta que esté firme.',
+                'Dejar enfriar y refrigerar antes de servir.'
+            ]
+        },
+        receta4: {
+            title: 'Tarta de Zanahoria',
+            text: 'Deliciosa Tarta de Zanahoria',
+            ingredients: ['Harina', 'Azúcar', 'Zanahorias', 'Nueces', 'Canela'],
+            image: 'https://i.pinimg.com/564x/6a/89/3a/6a893a3409735deccbab1a7f4511979d.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir las zanahorias ralladas, las nueces picadas y la canela, mezclar bien.',
+                'Verter la mezcla en un molde para tarta engrasado y hornear durante 30-35 minutos o hasta que esté cocida.',
+                'Dejar enfriar antes de servir.'
+            ]
+        },
+        receta5: {
+            title: 'Tarta de Santiago',
+            text: 'Deliciosa Tarta de Santiago.',
+            ingredients: ['Almendras molidas', 'Azúcar', 'Huevos', 'Mantequilla', 'Ralladura de limón'],
+            image: 'https://i.pinimg.com/564x/2f/9c/83/2f9c83788b557b26ceaf25db48a124b7.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar las almendras molidas y el azúcar en un tazón grande.',
+                'Añadir los huevos y la ralladura de limón, mezclar bien.',
+                'Derretir la mantequilla y agregar a la mezcla, integrar completamente.',
+                'Verter la masa en un molde para tarta y hornear durante 25-30 minutos o hasta que esté dorada.',
+                'Dejar enfriar antes de servir.'
+            ]
+        },
+        receta6: {
+            title: 'Tarta de Limón',
+            text: 'Deliciosa Tarta de Limon',
+            ingredients: ['Harina', 'Azúcar', 'Limones', 'Huevos', 'Mantequilla'],
+            image: 'https://i.pinimg.com/564x/2f/17/ef/2f17ef9f954eab10b6f7a13517b5202b.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir los huevos y el jugo de limón, mezclar hasta obtener una masa homogénea.',
+                'Derretir la mantequilla y agregar a la mezcla, integrar completamente.',
+                'Verter la masa en un molde para tarta y hornear durante 20-25 minutos o hasta que esté dorada.',
+                'Dejar enfriar antes de servir.'
+            ]
+        },
+        receta7: {
+            title: 'Pastel de Chocolate',
+            text: 'Delicioso Pastel de Chocolate',
+            ingredients: ['Harina', 'Azúcar', 'Cacao en polvo', 'Huevos', 'Aceite vegetal'],
+            image: 'https://i.pinimg.com/564x/35/33/f2/3533f2e8bdb3763f75ec652bceb21c6a.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina, el azúcar y el cacao en polvo en un tazón grande.',
+                'Añadir los huevos y el aceite vegetal, mezclar bien.',
+                'Verter la masa en un molde para pastel engrasado y hornear durante 30-35 minutos o hasta que esté cocido.',
+                'Dejar enfriar antes de desmoldar y servir.'
+            ]
+        },
+        receta8: {
+            title: 'Pastel de Coco',
+            text: 'Delicioso Pastel de Coco',
+            ingredients: ['Harina', 'Azúcar', 'Coco rallado', 'Huevos', 'Leche de coco'],
+            image: 'https://i.pinimg.com/564x/04/93/af/0493afa8810dd3a48e9408ced1283037.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Mezclar la harina y el azúcar en un tazón grande.',
+                'Añadir el coco rallado, los huevos y la leche de coco, mezclar hasta obtener una masa homogénea.',
+                'Verter la masa en un molde para pastel engrasado y hornear durante 35-40 minutos o hasta que esté dorado y cocido.',
+                'Dejar enfriar antes de desmoldar y servir.'
+            ]
+        },
+        receta9: {
+            title: 'Pastel de Tres Leches',
+            text: 'Delicioso Pastel de Tres Leches.',
+            ingredients: ['Harina', 'Azúcar', 'Leche condensada', 'Leche evaporada', 'Crema de leche'],
+            image: 'https://i.pinimg.com/564x/c7/e9/43/c7e943c6b0c3bd66f33ea577a6fd3c52.jpg',
+            instructions: [
+                'Precalentar el horno a 180°C (350°F).',
+                'Hornear el pastel según las instrucciones del paquete o la receta base.',
+                'Dejar enfriar ligeramente el pastel y pincharlo con un tenedor en toda su superficie.',
+                'Mezclar la leche condensada, la leche evaporada y la crema de leche, y verter lentamente sobre el pastel, dejando que absorba la mezcla.',
+                'Refrigerar durante al menos 4 horas o toda la noche antes de servir.',
+                'Opcional: Decorar con crema batida y frutas antes de servir.'
+            ]
+        }
+    };
+    function showRecipe(recipeId) {
+        document.getElementById('recipe-title').textContent = recipes[recipeId].title;
+        document.getElementById('recipe-text').textContent = recipes[recipeId].text;
+        document.getElementById('recipe-image').src = recipes[recipeId].image;
+
+        const ingredientsList = document.getElementById('recipe-ingredients');
+        ingredientsList.innerHTML = '';
+        recipes[recipeId].ingredients.forEach(ingredient => {
+            const li = document.createElement('li');
+            li.textContent = ingredient;
+            ingredientsList.appendChild(li);
+        });
+
+        const instructionsList = document.getElementById('recipe-instructions');
+        instructionsList.innerHTML = '';
+        recipes[recipeId].instructions.forEach(instruction => {
+            const li = document.createElement('li');
+            li.textContent = instruction;
+            instructionsList.appendChild(li);
+        });
+
+        document.querySelectorAll('.classification').forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        document.getElementById('recipe-details').classList.remove('hidden');
+    }
+
+    function goBack() {
+        document.querySelectorAll('.classification').forEach(section => {
+            section.classList.remove('hidden');
+        });
+
+        document.getElementById('recipe-details').classList.add('hidden');
+    }
+
+    </script>
+</body>
+</html>
